@@ -1,9 +1,0 @@
-{
-    "name": "amoeba-beef",
-    "scripts": {
-        "build": "bun build.ts"
-    },
-    "dependencies": {
-        "bun": "1.2.5"
-    }
-}

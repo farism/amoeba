@@ -6,7 +6,7 @@ DefaultNamespace = "amoeba"
 
 [Configs.Debug.Win64]
 CLibType = "DynamicDebug"
-LibPaths = ["$(ProjectDir)\\libs\\debug\\amoeba.lib"]
+LibPaths = ["$(ProjectDir)\\libs\\windows\\amoebad.lib"]
 
 [Configs.Release.Win64]
-LibPaths = ["$(ProjectDir)\\libs\\release\\amoeba.lib"]
+LibPaths = ["$(ProjectDir)\\libs\\windows\\amoeba.lib"]
