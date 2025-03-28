@@ -13,6 +13,8 @@ jobs:
           token: ${{ github.token }}
       - run: |
           date > generated.txt
+          git config user.email "farismmk@gmail.com"
+          git config --global user.name "Faris Mustafa"
           git add .
           git commit -m "generated"
           git push
