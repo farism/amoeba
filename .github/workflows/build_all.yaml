@@ -8,13 +8,15 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
+      - uses: oven-sh/setup-bun@v2
       - uses: actions/checkout@v4
         with:
           token: ${{ github.token }}
       - run: |
-          date > generated${{matrix.os}}.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          bun i -g cmake-ts-gen
+          bunx cmake-ts-gen
           git add .
           git commit -m "generated"
           git fetch
