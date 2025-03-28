@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - with:
+        with:
           token: ${{ github.token }}
       - run: |
           date > generated.txt
