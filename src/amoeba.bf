@@ -7,22 +7,22 @@ public static class amoeba
 {
 	typealias size_t = uint;
 
-    public const c_int AM_OK               = 0;
-    public const c_int AM_FAILED           = -1;
-    public const c_int AM_UNSATISFIED      = -2;
-    public const c_int AM_UNBOUND          = -3;
+	public const c_int AM_OK               = 0;
+	public const c_int AM_FAILED           = -1;
+	public const c_int AM_UNSATISFIED      = -2;
+	public const c_int AM_UNBOUND          = -3;
 
-    public const c_int AM_LESSEQUAL        = 1;
-    public const c_int AM_EQUAL            = 2;
-    public const c_int AM_GREATEQUAL       = 3;
+	public const c_int AM_LESSEQUAL        = 1;
+	public const c_int AM_EQUAL            = 2;
+	public const c_int AM_GREATEQUAL       = 3;
 
-    public const am_Num AM_REQUIRED        = 1000000000;
-    public const am_Num AM_STRONG          = 1000000;
-    public const am_Num AM_MEDIUM          = 1000;
-    public const am_Num AM_WEAK            = 1;
+	public const am_Num AM_REQUIRED        = 1000000000;
+	public const am_Num AM_STRONG          = 1000000;
+	public const am_Num AM_MEDIUM          = 1000;
+	public const am_Num AM_WEAK            = 1;
 
 #if AM_USE_FLOAT
-	typealias am_Num = float  ;
+	typealias am_Num = float;
 #else
 	typealias am_Num = double;
 #endif
@@ -33,7 +33,7 @@ public static class amoeba
 
 	public function void* am_Allocf(void* ud, void* ptr, size_t nsize, size_t osize);
 
-	[CLink] public static extern am_Solver* am_newsolver  (am_Allocf* allocf, void* ud);
+	[CLink] public static extern am_Solver* am_newsolver(am_Allocf* allocf, void* ud);
 	[CLink] public static extern void am_resetsolver(am_Solver* solver, int clear_constraints);
 	[CLink] public static extern void am_delsolver(am_Solver* solver);
 
