@@ -1,0 +1,17 @@
+name: Build All
+run-name: Build for all platforms
+on: [push]
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          date > generated.txt
+          git add .
+          git commit -m "generated"
+          git push
+      
